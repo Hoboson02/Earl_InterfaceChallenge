@@ -1,5 +1,8 @@
+import processing.core.PApplet;
 public class Circle extends Shape {
 
+    PApplet p;
+    int x =200;
     private double radius;
 
     public Circle(Point center, double radius) {
@@ -13,5 +16,10 @@ public class Circle extends Shape {
 
     public double getPerimeter() {
         return 2*Math.PI*radius;
+    }
+
+    @Override
+    public void draw() {
+        p.circle(x, 100, 100);
     }
 }
